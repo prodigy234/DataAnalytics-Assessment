@@ -33,7 +33,7 @@ This repository contains SQL solutions to the SQL Proficiency Assessment involvi
 - Finally I used `ROW_NUMBER()` to simulate expected `owner_id` formatting.
 
 **Challenges:**
-- The schema stores both savings and investment in one table, so we used flags (is_regular_savings and is_a_fund) to distinguish them
+- The schema stores both savings and investment in one table, so I used flags (is_regular_savings and is_a_fund) to distinguish them
 
 - Ensuring we only include "funded" plans required joining the savings transactions table and filtering for positive confirmed_amount.
 
@@ -54,7 +54,7 @@ This repository contains SQL solutions to the SQL Proficiency Assessment involvi
 **Approach:**
 - I used a 3-step CTE pipeline:
 
-`customer_tx_counts: Calculates total transactions and months of activity per customer using TIMESTAMPDIFF. We use GREATEST(..., 1) to ensure we never divide by zero.`
+`customer_tx_counts: Calculates total transactions and months of activity per customer using TIMESTAMPDIFF. I used GREATEST(.., 1) to ensure I never divide by zero.`
 
 `monthly_avg: Derives the average monthly transaction count per customer.`
 
@@ -116,7 +116,7 @@ This repository contains SQL solutions to the SQL Proficiency Assessment involvi
 - Conclusively, I used `ROW_NUMBER()` to simulate readable `owner_id` and `plan_id`.
 
 **Challenges:**
-- Some plans had no deposit history, so we handled `NULL` `last_transaction_date` properly.
+- Some plans had no deposit history, so I handled `NULL` `last_transaction_date` properly.
 
 - Some plans may have never had any inflows, so I had to allow for NULL dates in the join and filter.
 
